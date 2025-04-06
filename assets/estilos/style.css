@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+html{
+        scroll-behavior: smooth;
+}
+body{
+    height: 100dvh;
+    width:100vw;
+    overflow-x: hidden;
+}
+.mainHeader{
+    background-color: #050c0f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+}
+.mainHeader .logo{
+    max-width: 80px;
+    height: 80px;
+    background-color: aliceblue;
+    border-radius: 100%;
+}
+.mainHeader .logo img{
+    width: 100%;
+}
+.mainHeader button{
+    background-color: rgba(59, 59, 59, 0);
+    border: none;
+    padding: .40em;
+    cursor: pointer;
+}
+.mainHeader button img{
+    width: 50px;
+}
+.mainHeader .mainNav ul{
+    display: flex;
+    align-self: center;
+    gap: 4em;
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgb(73, 72, 72);
+    height: 100dvh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: all 0.5s ease-in-out;
+    z-index: 100;
+}
+.mainHeader .mainNav .ulMenu.active{
+    opacity: 1;
+    transform: scale(1);
+}
+.mainHeader .mainNav ul .close{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 4s ease-in-out;
+}
+.mainHeader .mainNav ul li a{
+    color:white;
+    font-size: 20px;
+}
+
+
+.heroBanner{
+    background: url("../imagens/bg.jpg");
+    height: 100dvh;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.heroBanner .heroBannerContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0 2%;
+}
+.heroBanner .heroBannerContent h1{
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+.heroBanner .heroBannerContent p{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+.heroBanner img{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-40%);
+    bottom: 0;
+    width: 80%;
+}
+
+.mainContent{
+  width: 100%;
+  height: 100dvh;
+}
+.mainContent section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+    background-color: rgb(68, 235, 96);
+}
+.mainContent .capitulos, .mainContent .fadeback{
+    background-color: blanchedalmond;
+}
